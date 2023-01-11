@@ -94,24 +94,28 @@ public class lamdaMain {
          * => 리스트 안의 모든 사과 빨간색으로 변환
          * **/
 
-        List<Apple> mapresult = map(appleList, apple ->
-                {
-                    if (apple.getColor() == Color.RED) {
-                        apple.setWeight(999);
-                    }
-                    apple.setColor(Color.RED);
-                });
-
-        for (Apple apple : mapresult) {
-            System.out.println(apple);
-        }
+        List<Color> mapresult = map(appleList, new GenericPrediacte2<Apple, Color>() {
+            @Override
+            public Color test(Apple apple) {
+                return apple.getColor();
+            }
+    });
 
         System.out.println("===========");
 
-        System.out.println("git for push applied_ after commit push test");
+        List<Color> colorList = map(appleList, apple -> apple.getColor());
+        System.out.println(colorList);
+
+        List<Integer> map2 = map(appleList, apple -> apple.getWeight());
+        System.out.println(map2);
+
+        map(appleList, Apple::getColor);
+
 
 
 
 
     }
+
+
 }

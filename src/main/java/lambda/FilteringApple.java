@@ -35,11 +35,11 @@ public class FilteringApple {
         return result;
     }
 
-    public static <T> List<T> map(List<T> inputList, GenericPrediacte2<T> function) {
-        List<T> result = new ArrayList<>();
+    public static <T, R> List<R> map(List<T> inputList, GenericPrediacte2<T, R> function) {
+        List<R> result = new ArrayList<>();
         for (T t : inputList) {
-            function.test(t);
-            result.add(t);
+            R r = function.test(t);
+            result.add(r);
         }
         return result;
     }

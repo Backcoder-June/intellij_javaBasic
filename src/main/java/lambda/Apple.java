@@ -7,7 +7,7 @@ import lombok.*;
 @Getter @Setter
 @ToString @EqualsAndHashCode
 public class Apple {
-    private int weight;
+    private Integer weight;
     private Color color;
 
 }
