@@ -1,0 +1,8 @@
+# Project exclude paths
+/.gradle/
+/build/
+/out/
+/out/production/classes/
+
+# idea 폴더 ignore 추가
+/.idea/
