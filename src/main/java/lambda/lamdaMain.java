@@ -108,6 +108,10 @@ public class lamdaMain {
 
         System.out.println("===========");
 
+        System.out.println("git for push applied_ after commit push test");
+
+
+
 
     }
 }
