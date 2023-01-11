@@ -64,7 +64,6 @@ public class Filtering {
                 .collect(Collectors.toList());
 //                .forEach(a -> System.out.println(a));
 
-
         System.out.println("==============");
         // 처음 등장하는 고기요리 2개 필터링
 
@@ -73,9 +72,5 @@ public class Filtering {
                 .limit(2)
                 .collect(Collectors.toList())
                 .forEach(t -> System.out.println(t));
-
-
-
-
     }
 }
